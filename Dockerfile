@@ -3,10 +3,10 @@ FROM lsiobase/alpine:3.8
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-LABEL build_version="blog.auska.win version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="Auska"
+LABEL build_version="github.com/godcong version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="godcong"
 
-ENV TZ=Asia/Shanghai PORT=1999 VER=3.6.4
+ENV TZ=Asia/Shanghai PORT=5299 VER=3.6.6
 
 RUN \
 	echo "**** install packages ****" \
@@ -24,5 +24,5 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-EXPOSE 1999
+EXPOSE 5299
 VOLUME /root/Downloads /defaults
