@@ -1,17 +1,11 @@
-# My Blog
-http://blog.auska.win
+本项目fork自auska的docker-baidupcs
+修改了下载写入权限的问题。
+以及更新至最新的baidupcs-web版本
 
 ## Usage
 
 ```
-docker create --name=baidupcs \
--v <path to downloads>:/root/Downloads \
--v <path to config>:/defaults \
--e PGID=<gid> -e PUID=<uid> \
--e TZ=<timezone> \
--e PORT=1999 \  #(port should be greater than 1024)
--p 1999:1999 \  
-auska/docker-baidupcs
+docker create --name=baidupcs -v <path to downloads>:/root/Downloads -v <path to config>:/defaults -e PGID=<gid> -e PUID=<uid> -e TZ=<timezone> -e PORT=5299 -p 5299:5299 godcong/docker-baidupcs
 ```
 
 
